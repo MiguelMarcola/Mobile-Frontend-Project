@@ -11,6 +11,8 @@ import {
 import theme from './src/global/styles/theme'
 import AppLoading from 'expo-app-loading';
 import { Catalog } from './src/screens/Catalog';
+import { Cart } from './src/screens/Cart';
+
 
 
 export default function App() {
@@ -26,7 +28,7 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Catalog />
+      <Cart />
     </ThemeProvider>  
   );
 }
