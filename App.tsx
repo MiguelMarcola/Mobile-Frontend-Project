@@ -1,5 +1,7 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
+import { NavigationContainer } from '@react-navigation/native';
+import { AppRoutes } from './src/routes/app.routes';
 
 import {
   useFonts,
@@ -12,8 +14,6 @@ import theme from './src/global/styles/theme'
 import AppLoading from 'expo-app-loading';
 import { Catalog } from './src/screens/Catalog';
 import { Cart } from './src/screens/Cart';
-
-
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -28,7 +28,9 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Cart />
-    </ThemeProvider>  
+      <NavigationContainer>
+        <AppRoutes />
+      </NavigationContainer>
+    </ThemeProvider>
   );
 }

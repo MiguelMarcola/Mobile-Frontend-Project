@@ -5,7 +5,7 @@ import { RFValue } from "react-native-responsive-fontsize";
 
 export const Container = styled.View`
     background-color: ${({ theme }) => theme.colors.background};
-    padding: ${getStatusBarHeight() + RFValue(31)}px ${RFValue(15)}px ${RFValue(30)}px;
+    padding: ${getStatusBarHeight() + RFValue(31)}px ${RFValue(20)}px ${RFValue(30)}px;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
