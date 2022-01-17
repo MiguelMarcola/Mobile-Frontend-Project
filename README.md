@@ -126,6 +126,3 @@ Feito com muita dedicação por Miguel Marçola 👋🏽 [Entre em contato!](htt
 
 ---
 
-##  Versões do README
-
-[Português 🇧🇷](./README.md)  |  [English](./README-en.md)  
