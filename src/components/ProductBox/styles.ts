@@ -1,6 +1,6 @@
 import styled from "styled-components/native";
 import { AntDesign } from "@expo/vector-icons"
-import { RFValue } from "react-native-responsive-fontsize";
+import { RFPercentage, RFValue } from "react-native-responsive-fontsize";
 
 export const Container = styled.View`
     flex-wrap: wrap;
@@ -38,7 +38,5 @@ export const ProductValue = styled.Text`
 export const AddProduct = styled(AntDesign)`
     font-size: ${RFValue(33)}px;
     color: ${({ theme }) => theme.colors.primary};
-    position: absolute;
-    right: ${RFValue(21)}px;
-    bottom: ${RFValue(10)}px;
+    padding-top: ${RFPercentage(10)}px
 `;

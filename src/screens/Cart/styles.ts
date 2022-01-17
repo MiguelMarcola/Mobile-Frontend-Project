@@ -14,23 +14,6 @@ export const Footer = styled.View`
     margin: ${RFValue(10)}px ${RFValue(20)}px;
 `;
 
-export const CartTotal = styled.View`
-    flex-direction: row;
-    align-items: center;
-`;
-
-export const TotalTitle = styled.Text`
-    font-family: ${({ theme }) => theme.fonts.regular};
-    font-size: ${RFValue(15)}px;
-`;
-
-export const Total = styled.Text`
-    font-family: ${({ theme }) => theme.fonts.bold};
-    font-size: ${RFValue(20)}px;
-    color: ${({ theme }) => theme.colors.primary};
-    margin-left: ${RFValue(5)}px;
-`;
-
 export const BuyProducts = styled.TouchableOpacity`
     width: 100%;
     background-color: ${({ theme }) => theme.colors.primary};
