@@ -23,17 +23,26 @@ const dataKey = "@frontproject:transactions";
 
 export function CartProductBox({data} : props){
     const [totItems, setTotItems] = useState(data.quantity)
+    const [totValue, setTotValue] = useState((data.value * data.quantity).toFixed(2))
 
     async function handleAddCart(id: String){
         try {
             const response = await AsyncStorage.getItem(dataKey)
-            const products = response ? JSON.parse(response!) : [];
+
+            const products = response ? 
+                JSON.parse(response!) : 
+                [];
+                
             const objIndex = products.findIndex((data: CartProductsProps) => data.id === id);
             
             if(objIndex !== -1){
+
                 products[objIndex].quantity++;
+
                 await AsyncStorage.setItem(dataKey, JSON.stringify(products));
+
                 setTotItems(totItems + 1)
+                setTotValue((products[objIndex].value * products[objIndex].quantity).toFixed(2))
             }
             
         } catch (error) {
@@ -50,10 +59,22 @@ export function CartProductBox({data} : props){
             const objIndex = products.findIndex((data: CartProductsProps) => data.id === id);
             
             if(objIndex !== -1){
+
                 products[objIndex].quantity--;
-                products[objIndex].quantity === 0 ? products.splice(objIndex, 1) : objIndex;
+
+                products[objIndex].quantity === 0 ? 
+                    setTotValue(products[objIndex].quantity) : 
+                    setTotValue((products[objIndex].value * products[objIndex].quantity).toFixed(2));
+
+                products[objIndex].quantity === 0 ? 
+                    products.splice(objIndex, 1) : 
+                    objIndex;
+
                 await AsyncStorage.setItem(dataKey, JSON.stringify(products));
-                totItems !== 1 && totItems !==0 ? setTotItems(totItems -1) : setTotItems(0);
+
+                totItems !== 1 && totItems !==0 ? 
+                    setTotItems(totItems -1) : 
+                    setTotItems(0);
             }
             
         } catch (error) {
@@ -62,13 +83,14 @@ export function CartProductBox({data} : props){
         }
         
     }
+
     return(
         <Container>
             <ProductImage source={{uri: data.image}}/>
             <ProductInformation>
                 <ProductStock>remaning {data.stock} items</ProductStock>
                 <ProductName>{data.name}</ProductName>
-                <ProductValue>$</ProductValue>
+                <ProductValue>${totValue}</ProductValue>
             </ProductInformation>
             <ProductControl>
 

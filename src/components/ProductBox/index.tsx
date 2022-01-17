@@ -20,7 +20,7 @@ interface props {
 interface productProps {
     id: string;
     name: string;
-    price: number;
+    value: number;
     stock: number;
     image: string;
     quantity: number;
@@ -34,7 +34,7 @@ export function ProductBox({ data } : props){
         const productData: productProps = {
             id: data.id,
             name: data.name,
-            price: data.price,
+            value: data.price,
             stock: data.stock,
             image: newImage,
             quantity: 1
@@ -61,8 +61,6 @@ export function ProductBox({ data } : props){
             Alert.alert("Não foi possível salvar");
         }
     }
-
-
     return(
         <Container>
             <ProductImage source={{uri: newImage}}/>
