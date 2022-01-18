@@ -55,10 +55,10 @@ O layout da aplicação está disponível no Figma:
 ### Mobile
 
 <p align="center">
-  <img alt="Visual" title="#Visual" src="./src/assets/design3.png" width="200px">
+  <img alt="Visual" title="#Visual" src="./src/assets/design3.png" width="400px">
 
-  <img alt="Visual" title="#Visual" src="./src/assets/design2.png" width="200px">
-  <img alt="Visual" title="#Visual" src="./src/assets/design1.png" width="200px">
+  <img alt="Visual" title="#Visual" src="./src/assets/design2.png" width="400px">
+  <img alt="Visual" title="#Visual" src="./src/assets/design1.png" width="400px">
 </p>
 
 ---
