@@ -46,7 +46,7 @@ Mobile Frontend Project - é uma aplicação desenvolvida em React Native com Ty
 
 O layout da aplicação está disponível no Figma:
 
-<a href="hhttps://www.figma.com/file/i8C3FvNOne6U4MwjYFZD0m/Projeto-Liven?node-id=0%3A1">
+<a href="https://www.figma.com/file/i8C3FvNOne6U4MwjYFZD0m/Projeto-Liven?node-id=0%3A1">
   <img alt="Made by tgmarinho" src="https://img.shields.io/badge/Acessar%20Layout%20-Figma-%2304D361">
 </a>
 
