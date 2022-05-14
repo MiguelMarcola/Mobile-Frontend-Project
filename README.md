@@ -18,7 +18,7 @@
     
    <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
   
-  <img alt="Feito pela Rocketseat" src="https://img.shields.io/badge/feito%20por-Miguel-%237519C1">
+  <img alt="Feito pelo Miguel" src="https://img.shields.io/badge/feito%20por-Miguel-%237519C1">
   
  
 </p>
